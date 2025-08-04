@@ -2,7 +2,7 @@ import cv2
 
 def create_negative_image(img_path, output_path):
     """
-    Creating negative image from input image so we dont have to work with three R G B
+    Creating negative image from input image 
     """
     img = cv2.imread(img_path)
     if img is None:
@@ -12,6 +12,7 @@ def create_negative_image(img_path, output_path):
     if len(img.shape) == 2:
         gray = img
     else:
+        # we dont have to work with three R G B
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
 
